@@ -1,0 +1,251 @@
+/* General Body and Font Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 70px; /* Adjust for fixed navbar height */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #222;
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: #222 !important; /* Darker background for navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #ccc !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #007bff !important; /* Bootstrap primary blue */
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff !important;
+}
+
+/* Home Section */
+.home-section {
+    min-height: 100vh; /* Full viewport height */
+    /* Replace with your actual background image or remove if not needed */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x1000/007bff/ffffff?text=Background+Image') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 70px; /* Offset for fixed navbar */
+}
+
+.home-section h1 {
+    color: #fff;
+}
+
+.home-section h2 {
+    color: #f8f9fa; /* Light grey for subheading */
+}
+
+.home-section p {
+    color: #e9ecef; /* Lighter grey for paragraph */
+}
+
+.home-img-box img {
+    border: 8px solid #a9bbce; /* Primary color border */
+    max-width: 500px; /* Max width for circular image */
+    height: 500px; /* Ensure height matches width for perfect circle */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 30px;
+    border-radius: 50px; /* Pill button */
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+}
+
+.about-section h1, .about-section h2 {
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.about-section h1::after, .about-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.about-section ul.list-unstyled li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-section ul.list-unstyled li i {
+    font-size: 1.3rem;
+    margin-right: 8px;
+    color: #007bff;
+}
+
+/* Skills Progress Section */
+.skills-progress-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.skills-progress-section .progress {
+    height: 10px; /* Thinner progress bar */
+    border-radius: 5px;
+}
+
+.skills-progress-section .progress-bar {
+    background-color: #007bff; /* Primary color for progress bars */
+}
+
+/* Projects Section (Portfolio) */
+.projects-section {
+    padding: 80px 0;
+}
+
+.projects-section h1 {
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.projects-section h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.projects-section .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.projects-section .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.projects-section .card-title {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.projects-section .card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.projects-section .btn-outline-primary {
+    border-radius: 50px;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #222 !important;
+    color: #e9ecef !important;
+    padding: 20px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #222;
+        padding-bottom: 15px;
+    }
+    .navbar-nav {
+        margin-bottom: 15px;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .home-section {
+        text-align: center;
+    }
+    .home-img-box {
+        margin-top: 30px;
+    }
+    .home-img-box img {
+        max-width: 250px;
+        height: 250px;
+    }
+    .about-section h1::after, .about-section h2::after, .projects-section h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .home-section h1 {
+        font-size: 2.5rem;
+    }
+    .home-section h2 {
+        font-size: 1.5rem;
+    }
+    .btn-primary {
+        padding: 8px 25px;
+        font-size: 0.9rem;
+    }
+    .projects-section .card-img-top {
+        height: 180px;
+    }
+}
